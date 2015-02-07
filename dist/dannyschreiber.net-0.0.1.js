@@ -632,7 +632,6 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
 	    function init(){
 			ResumeService.getResume()
 				.then(function(data){
-					console.log('resume ', data);
 					rc.resume = data[0];
 				});
 	    }

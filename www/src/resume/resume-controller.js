@@ -15,7 +15,6 @@
 	    function init(){
 			ResumeService.getResume()
 				.then(function(data){
-					console.log('resume ', data);
 					rc.resume = data[0];
 				});
 	    }
