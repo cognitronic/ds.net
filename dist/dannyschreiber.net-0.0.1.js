@@ -425,7 +425,7 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
  */
 
 (function(){ 'use strict';
-	var BASE_API = 'http://localhost:3000/api/';
+	var BASE_API = 'https://admin-ds-net.herokuapp.com/api/';
 	/*jslint smarttabs:true */
 	angular.module('ds').constant('Constants', {
 		ROUTES: {
