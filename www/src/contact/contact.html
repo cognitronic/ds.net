@@ -1,0 +1,106 @@
+<!-- PAGE : CONTACT -->
+<section id="contact" class="page">
+	<div class="content">
+
+
+
+		<!-- row -->
+		<div class="row">
+
+
+			<!-- column 6/12 -->
+			<div class="col-md-6">
+
+				<h2 class="section-title"><span><i class="icon-address-book"></i>LET'S GET IN TOUCH</span></h2>
+
+				<!-- LETTER -->
+				<div class="letter">
+
+					<h4 class="letter-title">Danny Schreiber</h4>
+
+					<div class="stamp">
+						<img src="src/assets/images/my_avatar.jpg" alt="stamp">
+					</div>
+
+					<div class="letter-info">
+						<p><i class="icon-at"></i>danny@ravenartmedia.com</p>
+						<p><i class="icon-phone"></i>209.277.4776</p>
+						<p><i class="icon-location"></i>Modesto, CA</p>
+					</div>
+
+				</div>
+				<div>
+					<ul class="social">
+						<li><a class="facebook" target="_blank" href="https://www.facebook.com/cognitronic"></a></li>
+						<li><a class="twitter" target="_blank" href="https://twitter.com/RavenArtMedia"></a></li>
+						<li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/dannyschreiber"></a></li>
+						<li><a class="google-plus" target="_blank" href="https://plus.google.com/+DannySchreiberfuhlife"></a></li>
+						<li><a class="github" target="_blank" href="https://github.com/cognitronic"></a></li>
+						<li><a class="instagram" target="_blank" href="http://instagram.com/cognitronic/"></a></li>
+						<li><a class="skype" target="_blank" href="skype:cognitronic?chat"></a></li>
+						<li><a class="stack-overflow" target="_blank" href="http://stackoverflow.com/users/556363/cognitronic"></a></li>
+					</ul>
+				</div>
+				<!-- LETTER -->
+
+
+
+
+
+			</div>
+			<!-- column 6/12 -->
+
+
+			<!-- column 6/12 -->
+			<div class="col-md-6">
+
+
+				<h2 class="section-title"><span><i class="icon-paper-plane"></i>DROP ME A LINE</span></h2>
+
+
+				<!-- .contact-form -->
+				<div class="contact-form">
+
+					<form id="contactForm" name="contactForm"  >
+
+						<!-- enter mail subject here -->
+						<input type="hidden" ng-model="cc.email.subject" name="subject" id="subject" value="You have a new message from cvCard!">
+
+						<p>
+							<label for="name">NAME</label>
+							<input ng-model="cc.email.name" type="text" name="name" id="name" required>
+						</p>
+
+						<p>
+							<label for="email">EMAIL</label>
+							<input ng-model="cc.email.fromEmail" type="email" name="email" id="email" required>
+						</p>
+
+
+						<p>
+							<label for="message">MESSAGE</label>
+							<textarea ng-model="cc.email.htmlMessage" name="message" id="message" required></textarea>
+						</p>
+
+						<p>
+							<button ng-click="cc.sendEmail(cc.email)" ng-disabled="contactForm.$invalid" class="btn  primary">SEND</button>
+						</p>
+
+					</form>
+
+				</div>
+				<!-- .contact-form -->
+
+			</div>
+			<!-- column 6/12 --><!-- column 6/12 -->
+
+
+
+		</div>
+		<!-- row -->
+
+
+
+	</div>
+</section>
+<!-- PAGE : CONTACT -->

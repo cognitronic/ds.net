@@ -1,0 +1,59 @@
+<section id="blog-list" class="page">
+	<div class="content">
+		<h2 class="section-title center"><span><i class="icon-book-open"></i>ALL POSTS</span></h2>
+
+		<div class="blog-posts readable-content">
+
+			<!-- .post -->
+			<article class="post type-post hentry" ng-repeat="post in bc.posts">
+
+
+				<!-- .entry-meta -->
+				<footer class="entry-meta">
+					<span class="post-format"></span>
+					<span title="2013" class="entry-date">
+						<span class="day">{{post.dateCreated | date : 'dd'}}</span>
+                        {{post.dateCreated | date : 'MMM'}}<br/>
+	                    <small>{{post.dateCreated | date : 'yyyy'}}</small>
+					</span>
+					<!--<span class="entry-comment"><span class="count">3</span>comments</span>-->
+				</footer>
+				<!-- .entry-meta -->
+
+
+				<!-- .entry-header -->
+				<header class="entry-header">
+					<h1 class="entry-title">
+						<a href="" ng-click="bc.viewPost(post.title)" rel="bookmark">{{post.title}}</a>
+					</h1>
+				</header>
+				<!-- .entry-header -->
+
+
+				<!-- .featured-image -->
+				<div class="featured-image">
+					<cl-image public-id="{{post.imagePath}}" class="thumbnail inline" >
+						<cl-transformation format="png" height="488" width="650" crop="thumb" gravity="face" effect="shadow"></cl-transformation>
+					</cl-image>
+				</div>
+				<!-- .featured-image -->
+
+
+				<!-- .entry-content -->
+				<div class="entry-content">
+					<p>
+						{{post.preview}}
+						<a href="" ng-click="bc.viewPost(post.title)" class="more-link">
+							Continue reading <span class="meta-nav">→</span>
+						</a>
+					</p>
+				</div>
+				<!-- .entry-content -->
+
+
+			</article>
+			<!-- .post -->
+
+		</div>
+	</div>
+</section>

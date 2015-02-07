@@ -1,0 +1,51 @@
+<!-- PAGE : BLOG -->
+<section id="blog" class="page">
+	<div class="content">
+
+
+
+
+		<h2 class="section-title center"><span><i class="icon-book-open"></i>LATEST FROM THE BLOG</span></h2>
+
+		<!-- LATEST POSTS -->
+		<div class="latest-posts media-grid" data-layout="fitRows">
+
+			<!-- post -->
+			<article class="hentry col-md-4 col-sm-6 col-xs-12" ng-repeat="post in bc.posts">
+				<div class="media-container">
+					<div class="media-box">
+						<cl-image public-id="{{post.imagePath}}" class="thumbnail inline" >
+							<cl-transformation format="png" height="266" width="305" crop="fill" effect="shadow"></cl-transformation>
+						</cl-image>
+						<a href="" ng-click="bc.viewPost(post.title)"></a>
+					</div>
+					<header class="media-cell-desc">
+                    <span title="2013" class="date">
+                        <span class="day">{{post.dateCreated | date : 'dd'}}</span>
+                        {{post.dateCreated | date : 'MMM'}}<br/>
+	                    <small>{{post.dateCreated | date : 'yyyy'}}</small>
+                    </span>
+						<h3>
+							<a href="" ui-sref="bc.viewPost(post.title)">
+								{{post.title}}
+							</a>
+						</h3>
+					</header>
+				</div>
+			</article>
+			<!-- post -->
+
+
+
+		</div>
+		<!-- LATEST POSTS -->
+		<div style="clear:both;">
+			<p class="launch"><a class="button primary" href="" ui-sref="blog-list">SEE ALL POSTS</a></p>
+		</div>
+
+
+
+
+	</div>
+</section>
+<!-- PAGE : BLOG -->

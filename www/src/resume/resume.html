@@ -1,0 +1,290 @@
+<!-- PAGE : RESUME -->
+<section id="resume" class="page" ng-cloak>
+	<div class="content">
+		<!-- CONTENT -->
+
+
+		<!-- row -->
+		<div class="row">
+
+
+			<!-- col 6/12 -->
+			<div class="col-md-6">
+
+				<!-- timeline -->
+				<div class="timeline">
+
+					<h2><i class="fa fa-flask"></i>WORK HISTORY</h2>
+
+					<div class="event current">
+						<span class="date">2014</span>
+						<h4>Senior Software Engineer</h4>
+						<h5>Curaspan Health Group</h5>
+						<p>
+							I currently work as a senior software engineer for Boston based Curaspan Health Group. The position is 100% remote and almost all of my time is spent on the front-end.  <b>Creating an AngularJS framework</b>, building custom directives, writing unit/integration tests, heavy performance optimization and <b>cross-browser compatibility</b> are some of the things I focus on.
+						</p>
+						<p>
+							The environment is agile (daily stand-ups, bi-weekly grooming, bi-monthly sprint releases and retros, code reviews) and <b>my main tools</b> are: Angular, Grunt, Karma, Jasmine, Node, Maven, Tomcat, Jenkins, Jira, IntelliJ.
+						</p>
+					</div>
+
+
+					<div class="event">
+						<span class="date">2007</span>
+						<h4>Senior Software Developer</h4>
+						<h5>Data Path Inc.</h5>
+						<p>
+							At Data Path I did full stack development on <b>over 50  projects</b> that spanned many different industries.  Being a smaller company, I was the head of the software development division and would be responsible for the entire life cycle of each project.  I met with clients, helped them define their problem, structured a solution, developed and tested that solution, as well as implement and maintain the final application.
+						</p>
+						<p>
+							Most projects were for the organization's internal business use and involved data integration, content management, and reporting.  The tech stack, if the project was from scratch, usually consisted of <b>Microsoft Asp.Net MVC/ C# / SqlServer</b>. I also did many projects that brought disparate systems together for better visibility, integrations that involved: MySql, <b>MongoDB</b>, Firebird, Sql Server, d4, and Oracle.
+						</p>
+						<p>
+							I also worked on creating several products while at Data Path.  <b>HR River</b> is an employee performance and communication tool aimed at bringing clarity and fostering communication between HR, the employee, and managers.  TechConfigured was an eCommerce application that allowed companies to order network hardware, have it configured by the Data Path team, and then drop shipped to the customer ready to just plug into their network and go.  InSight was a custom task/ticketing system that manaaged help desk tickets, employee time, client profiles, customer product orders, inventory, and ran reports.
+						</p>
+					</div>
+
+					<div class="event">
+						<span class="date">2004</span>
+						<h4>Internet Services Analyst - Web Developer</h4>
+						<h5>Modesto City Schools</h5>
+						<p>
+							I was responsible for the analysis, design, creation, testing, documenting, implementing, and supporting custom software developed on the <b>.Net platform</b>.  I worked on <b>developing a custom framework</b> the district that all interntal applications would use.  With that framework, I developed in part or in full, the following systems:
+						<ul>
+							<li>
+								Applicant Tracking
+							</li>
+							<li>
+								Position Control
+							</li>
+							<li>
+								Student Cumulative Folder Tracking
+							</li>
+							<li>
+								Absence Tracking
+							</li>
+							<li>
+								Web Based Training
+							</li>
+							<li>
+								Field and Maintenance Requests
+							</li>
+							<li>
+								Data Integration
+							</li>
+							<li>
+								Reports....many, many reports
+							</li>
+						</ul>
+						</p>
+					</div>
+
+					<div class="event">
+						<span class="date">2001</span>
+						<h4>Infrastructure Analyst</h4>
+						<h5>John Deere Food Origins</h5>
+						<p>
+							At Food Origins my role was close to dev ops/network admin.  I developed web pages, web services, and monitoring tools for an agriculture application that followed the farm to processor life cycle.
+						</p>
+						<p>
+							I developed integration solutions using <b>Python and Java</b> in a <b>Linux environment</b> as well as provided network, software, and hardware support to over 700 clients.  Maintaining development, and QA environments also fell on my list of things todo.
+						</p>
+					</div>
+
+				</div>
+				<!-- timeline -->
+
+
+			</div>
+			<!-- col 6/12 -->
+
+
+
+			<!-- col 6/12 -->
+			<div class="col-md-6">
+				<div class="row">
+					<div class="pull-right">
+						<span class="circle spinning-circle green-gradient"></span>
+						<span>= used in production &nbsp;</span>
+						<span class="circle spinning-circle yellow-gradient"></span>
+						<span>= twerked around with for personal use  &nbsp;</span>
+						<span class="circle spinning-circle blue-gradient"></span>
+						<span>= very interested to learn  &nbsp;</span>
+					</div>
+				</div>
+				<h2 class="section-title"><span><i class="icon-cog-1"></i>DEVELOPMENT SKILLS</span></h2>
+
+				<div class="skillset">
+					<div class="col-xs-6 col-sm-4 col-md-2" ng-repeat="skill in rc.resume.devSkills">
+						<div class="client">
+							<span class="circle spinning-circle {{skill.level}}-gradient"></span>
+							<a href="{{skill.url}}" target="_blank">
+								<cl-image public-id="{{skill.icon}}" class="thumbnail inline" >
+									<cl-transformation format="png" height="48" width="48" crop="fit" ></cl-transformation>
+								</cl-image>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+
+
+				<h2 class="section-title"><span><i class="icon-brush"></i>DESIGN SKILLS</span></h2>
+
+				<!-- DESIGN SKILLS -->
+				<div class="skillset">
+
+					<div class="col-xs-6 col-sm-4 col-md-2" ng-repeat="skill in rc.resume.designSkills">
+						<div class="client">
+							<span class="circle spinning-circle {{skill.level}}-gradient"></span>
+							<a href="{{skill.url}}" target="_blank">
+								<cl-image public-id="{{skill.icon}}" class="thumbnail inline" >
+									<cl-transformation format="png" height="48" width="48" crop="fit" ></cl-transformation>
+								</cl-image>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<!-- DESIGN SKILLS -->
+
+
+				<div class="clearfix"></div>
+
+
+				<h2 class="section-title"><span><i class="icon-macstore"></i>ENVIRONMENT SKILLS</span></h2>
+
+				<!-- ENV SKILLS -->
+				<div class="skillset">
+					<div class="col-xs-6 col-sm-4 col-md-2" ng-repeat="skill in rc.resume.envSkills">
+						<div class="client">
+							<span class="circle spinning-circle {{skill.level}}-gradient"></span>
+							<a href="{{skill.url}}" target="_blank">
+								<cl-image public-id="{{skill.icon}}" class="thumbnail inline" >
+									<cl-transformation format="png" height="48" width="48" crop="fit" ></cl-transformation>
+								</cl-image>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- ENV SKILLS -->
+
+				<div class="clearfix"></div>
+
+				<!--<h2 class="section-title"><span><i class="icon-comment"></i>TESTIMONIALS</span></h2>-->
+
+				<!--&lt;!&ndash; testo-group &ndash;&gt;-->
+				<!--<div class="testo-group">-->
+
+				<!--&lt;!&ndash; Testimonial &ndash;&gt;-->
+				<!--<div class="testo">-->
+				<!--<img src="images/site/testo-01.jpg" alt="someone">-->
+				<!--<h4>David Darmstandler <span>CEO / Co-Founder - Data Path Inc.</span></h4>-->
+				<!--<p>-->
+				<!---->
+				<!--</p>-->
+
+				<!--</div>-->
+				<!--&lt;!&ndash; Testimonial &ndash;&gt;-->
+
+				<!--&lt;!&ndash; Testimonial &ndash;&gt;-->
+				<!--<div class="testo">-->
+				<!--<img src="images/site/testo-02.jpg" alt="someone">-->
+
+				<!--<h4>John Sablan <span>CTO / Prime Shine Inc.</span></h4>-->
+				<!--<p>-->
+				<!---->
+				<!--</p>-->
+
+				<!--</div>-->
+				<!--&lt;!&ndash; Testimonial &ndash;&gt;-->
+
+				<!--&lt;!&ndash; Testimonial &ndash;&gt;-->
+				<!--<div class="testo">-->
+				<!--<img src="images/site/testo-03.jpg" alt="someone">-->
+
+				<!--<h4>Anthony Trujillo<span>Senior Software Engineer / RHA</span></h4>-->
+				<!--<p>-->
+				<!---->
+				<!--</p>-->
+
+				<!--</div>-->
+				<!--&lt;!&ndash; Testimonial &ndash;&gt;-->
+
+				<!--</div>-->
+				<!--&lt;!&ndash; testo-group &ndash;&gt;-->
+
+				<h2 class="section-title"><span><i class="icon-embassy"></i>CLEINTS</span></h2>
+
+				<!-- CLIENTS -->
+				<div class="row">
+
+
+					<div class="col-xs-6 col-sm-4 col-md-2" ng-repeat="client in rc.resume.clients">
+
+						<!-- client -->
+						<div class="client">
+							<a href="">
+								<cl-image public-id="{{client.icon}}" class="thumbnail inline" >
+									<cl-transformation format="png" height="48" width="48" crop="pad" ></cl-transformation>
+								</cl-image>
+							</a>
+						</div>
+						<!-- client -->
+
+					</div>
+
+				</div>
+				<!-- CLIENTS -->
+
+
+
+
+				<h2 class="section-title"><span><i class="icon-doc-alt"></i>DOWNLOAD MY CV</span></h2>
+
+				<p>You can download my CV in pdf format if you like. </p>
+
+				<!-- DOWNLOAD BUTTON -->
+				<div class="download-button">
+					<a target="_blank" href="https://app.box.com/s/f6xg3ax5j0jww8pfyayl6zdulak14eiy" class="button primary">DOWNLOAD CV</a>
+				</div>
+				<!-- DOWNLOAD BUTTON -->
+
+
+				<h2 class="section-title"><span><i class="icon-linkedin"></i>VIEW MY LINKEDIN PROFILE</span></h2>
+
+				<p>Check me out on LinkedIn.</p>
+
+				<!-- DOWNLOAD BUTTON -->
+				<div class="download-button">
+					<a target="_blank" href="https://www.linkedin.com/in/dannyschreiber" class="button primary">MY LINKEDIN PROFILE</a>
+				</div>
+				<!-- DOWNLOAD BUTTON -->
+
+				<h2 class="section-title"><span><i class="icon-github-circled"></i>VIEW MY GITHUB PROFILE</span></h2>
+
+				<p>Take a look at my Github profile. </p>
+
+				<!-- DOWNLOAD BUTTON -->
+				<div class="download-button">
+					<a target="_blank" href="https://www.github.com/cognitronic" class="button primary">MY GITHUB PROFILE</a>
+				</div>
+				<!-- DOWNLOAD BUTTON -->
+
+
+			</div>
+			<!-- col 6/12 -->
+
+
+		</div>
+		<!-- row -->
+
+
+
+
+	</div>
+	<!-- CONTENT -->
+
+</section>
+<!-- PAGE : RESUME -->

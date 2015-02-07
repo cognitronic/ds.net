@@ -1,0 +1,159 @@
+<!-- PAGE : ABOUT -->
+<section id="about" class="page">
+	<div class="content">
+
+		<!-- row -->
+		<div class="row">
+
+			<!-- column 8/12 -->
+			<div class="col-md-8">
+
+				<h2 class="section-title"><span><i class="icon-guest"></i>A LITTLE ABOUT ME</span></h2>
+
+				<!-- intro -->
+				<div class="intro">
+					<br />
+					<h2>
+
+						Hello. I am passionate about
+						<ram-angular-word-rotator class="rotate-words" word-list="{{ac.words}}"></ram-angular-word-rotator>
+
+					</h2>
+
+				</div>
+				<!-- intro -->
+
+
+			</div>
+			<!-- column 8/12 -->
+
+
+			<!-- column 4/12 -->
+			<div class="col-md-4">
+
+				<h2 class="section-title"><span><i class="icon-twitter"></i>LATEST TWEETS</span></h2>
+
+				<!--<div id="latest-tweetes" class="widget-twitter" data-twitterId="561892883058290688" data-tweet-count="1"></div>-->
+				<ram-angular-tweet class="widget-twitter" twitter-id="561892883058290688" tweet-count="1"></ram-angular-tweet>
+
+			</div>
+			<!-- column 4/12 -->
+
+
+		</div>
+		<!-- row -->
+
+
+
+
+
+		<h2 class="section-title"><span><i class="fa fa-magic"></i>WHAT I'M READING</span></h2>
+
+		<!-- SERVICES -->
+		<div class="row">
+
+			<div class="col-xs-6 col-sm-4 col-md-2" ng-repeat="book in ac.profile.reading">
+
+				<div class="media-cell design hentry">
+					<div class="media-box">
+						<cl-image public-id="{{book.icon}}" class="thumbnail inline" >
+							<cl-transformation format="png" height="247" width="174" crop="pad" ></cl-transformation>
+						</cl-image>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- SERVICES -->
+
+
+
+
+
+		<h2 class="section-title"><span><i class="icon-layers-alt"></i>WHAT I'M LISTENING TO</span></h2>
+
+		<!-- PROCESS -->
+		<div class="row">
+
+
+			<div class="col-xs-6 col-sm-4 col-md-2">
+
+				<div class="media-cell design hentry">
+
+					<div class="media-box">
+						<img src="src/assets/images/book-covers/massiveAttack.jpg" alt="Massive Attack">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-sm-4 col-md-2">
+
+				<div class="media-cell design hentry">
+
+					<div class="media-box">
+						<img src="src/assets/images/book-covers/qotsa.gif" alt="Queens Of The Stone Age">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-sm-4 col-md-2">
+
+				<div class="media-cell design hentry">
+
+					<div class="media-box">
+						<img src="src/assets/images/book-covers/deftones.jpg" alt="Deftones">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-sm-4 col-md-2">
+
+				<div class="media-cell design hentry">
+
+					<div class="media-box">
+						<img src="src/assets/images/book-covers/ldr.png" alt="Lana Del Rey">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-sm-4 col-md-2">
+
+				<div class="media-cell design hentry">
+
+					<div class="media-box">
+						<img src="src/assets/images/book-covers/failure.jpg" alt="Failure">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-sm-4 col-md-2">
+
+				<div class="media-cell design hentry">
+
+					<div class="media-box">
+						<img src="src/assets/images/book-covers/thebadplus.jpg" alt="The Bad Plus">
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- PROCESS -->
+
+
+
+	</div>
+</section>
+<!-- PAGE : ABOUT -->

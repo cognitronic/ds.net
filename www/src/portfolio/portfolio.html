@@ -1,0 +1,52 @@
+<!-- PAGE : PORTFOLIO -->
+<section id="portfolio" class="portfolio page">
+	<div class="content">
+
+
+		<h2 class="section-title center"><span><i class="icon-leaf"></i>MY WORKS</span></h2>
+
+
+
+		<!-- PORTFOLIO -->
+		<div class="portfolio-items media-grid" data-layout="masonry">
+
+
+			<!-- portfolio-item -->
+			<div class="col-md-4 col-sm-6 col-xs-12 {{project.workType}} hentry"  ng-repeat="project in pc.portfolio | filter:{workType: '!logo'}">
+
+				<div class="media-container">
+					<div class="media-box">
+						<cl-image public-id="{{project.imagePaths[0]}}" class="thumbnail inline" >
+							<cl-transformation format="png" height="266" width="305" crop="fill" effect="shadow"></cl-transformation>
+						</cl-image>
+						<a href="" ng-click="pc.openProject(project.title)" class="ajax"></a>
+					</div>
+
+					<div class="media-cell-desc">
+						<a href="" ng-click="pc.openProject(project.title)" class="ajax">
+							<h3>{{project.title}}</h3>
+						</a>
+						<p class="category">{{project.category}}</p>
+					</div>
+				</div>
+			</div>
+			<!-- portfolio-item -->
+
+
+		</div>
+		<!-- PORTFOLIO -->
+
+
+
+
+
+
+	</div>
+	<!-- CONTENT -->
+
+</section>
+<!-- PAGE : PORTFOLIO -->
+
+<script>
+
+</script>

@@ -1,0 +1,68 @@
+<!-- .portfolio-single -->
+<div class="portfolio-single">
+
+
+
+	<!-- .row -->
+	<div class="row">
+
+		<!-- TITLE - column 8/12 -->
+		<div class="col-md-8 portfolio-field portfolio-title">
+			<h2>{{projVm.project.title}}</h2>
+		</div>
+		<!-- TITLE - column 8/12 -->
+
+
+		<!-- PORTFOLIO-NAV - column 4/12 -->
+		<div class="col-md-4 portfolio-field portfolio-nav">
+
+		</div>
+		<!-- PORTFOLIO-NAV - column 4/12 -->
+
+	</div>
+	<!-- .row -->
+
+
+
+	<!-- .row -->
+	<div class="row">
+
+		<!-- PORTFOLIO-IMAGES - column 8/12 -->
+		<div class="col-md-8 portfolio-field">
+			<div ng-repeat="img in projVm.project.imagePaths">
+				<cl-image public-id="{{img}}" class="thumbnail inline" >
+					<cl-transformation format="png" height="705" width="940" crop="mpad" effect="shadow"></cl-transformation>
+				</cl-image>
+			</div>
+		</div>
+		<!-- PORTFOLIO-IMAGES - column 8/12 -->
+
+
+		<!-- PORTFOLIO SIDEBAR - column 4/12 -->
+		<div class="col-md-4 portfolio-field">
+
+			<h3>Description</h3>
+			<p ng-bind-html="projVm.project.description">
+			</p>
+
+			<h3>Client</h3>
+			<p>{{projVm.project.client}}</p>
+
+			<h3>Technology</h3>
+			<ul class="tags">
+				<li ng-repeat="tag in projVm.project.technologies">
+					<a>{{tag}}</a>
+				</li>
+			</ul>
+
+			<div ng-show="projVm.project.url" class="launch">
+				<a href="{{projVm.project.url}}" class="button primary">LAUNCH PROJECT</a>
+			</div>
+
+		</div>
+		<!-- PORTFOLIO SIDEBAR - column 4/12 -->
+
+	</div>
+	<!-- .row -->
+</div>
+<!-- .portfolio-single -->
