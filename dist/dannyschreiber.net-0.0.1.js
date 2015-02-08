@@ -184,28 +184,6 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			});
-	})
-	.run(function(ProfileService, CacheService, Constants, PostService, PortfolioService){
-		if(!CacheService.getItem(Constants.CACHE.CURRENT_PROFILE)){
-			ProfileService.getProfile()
-				.then(function(data){
-					CacheService.setItem(Constants.CACHE.CURRENT_PROFILE, data[0]);
-				});
-		}
-
-		if(!CacheService.getItem(Constants.CACHE.POSTS_LIST)){
-			PostService.getPosts()
-				.then(function(data){
-					CacheService.setItem(Constants.CACHE.POSTS_LIST, data);
-				});
-		}
-
-		if(!CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST)){
-			PortfolioService.getPortfolio()
-				.then(function(data){
-					CacheService.setItem(Constants.CACHE.PORTFOLIO_LIST, data);
-				});
-		}
 	});
 /**
  * Created by Danny Schreiber on 2/4/2015.
@@ -220,8 +198,11 @@ angular.module('ds', ['ui.router',
 	    init();
 
 	    function init(){
-			ac.profile = MainService.getProfile();
-		    ac.words = ['software engineering', 'artistic exploration', 'writing and playing music'];
+			MainService.getProfile().then(function(data){
+				ac.profile = data;
+			});
+
+		    ac.words = ['software engineering', 'artistic exploration', 'writing and playing music', 'Brazilian Jiu Jitsu', 'learning new things'];
 	    }
     };
 	angular.module('ds').controller('AboutController', ['MainService', AboutController]);
@@ -241,7 +222,9 @@ angular.module('ds', ['ui.router',
 	    init();
 
 	    function init(){
-		    bc.posts = MainService.getPostsForMainPage();
+		    MainService.getPostsForMainPage().then(function(data){
+			    bc.posts = data;
+		    });
 	    }
 
 	    function viewPost(title){
@@ -481,9 +464,11 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
 	    init();
 
 	    function init(){
-		    spa.profile = MainService.getProfile();
-		    setTagLine();
-		    setBannerImage();
+		    MainService.getProfile().then(function(data){
+			    spa.profile = data;
+			    setTagLine();
+			    setBannerImage();
+		    });
 		    spa.posts = MainService.getPostsForMainPage();
 		    spa.portfolio = MainService.getPortfolioForMainPage();
 
@@ -533,18 +518,48 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
  */
 
 (function(){ 'use strict';
-    var MainService = function(UtilityService, CacheService, Constants){
+    var MainService = function(UtilityService, CacheService, Constants, ProfileService, PostService, PortfolioService, $q){
 
 	    var _getProfile = function(){
-			return CacheService.getItem(Constants.CACHE.CURRENT_PROFILE);
+		    var deferred = $q.defer();
+		    if(!CacheService.getItem(Constants.CACHE.CURRENT_PROFILE)){
+			    ProfileService.getProfile()
+				    .then(function(data){
+					    CacheService.setItem(Constants.CACHE.CURRENT_PROFILE, data[0]);
+					    deferred.resolve(data[0]);
+				    });
+		    } else{
+			    deferred.resolve(CacheService.getItem(Constants.CACHE.CURRENT_PROFILE));
+		    }
+		    return deferred.promise;
 		};
 
 	    var _getPostsForMainPage = function(){
-		    return CacheService.getItem(Constants.CACHE.POSTS_LIST);
+		    var deferred = $q.defer();
+		    if(!CacheService.getItem(Constants.CACHE.POSTS_LIST)){
+			    PostService.getPosts()
+				    .then(function(data){
+					    CacheService.setItem(Constants.CACHE.POSTS_LIST, data);
+					    deferred.resolve(data);
+				    });
+		    } else{
+			    deferred.resolve(CacheService.getItem(Constants.CACHE.POSTS_LIST));
+		    }
+		    return deferred.promise;
 	    };
 
 	    var _getPortfolioForMainPage = function(){
-		    return CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST);
+		    var deferred = $q.defer();
+		    if(!CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST)){
+			    PortfolioService.getPortfolio()
+				    .then(function(data){
+					    CacheService.setItem(Constants.CACHE.PORTFOLIO_LIST, data);
+					    deferred.resolve(data);
+				    });
+		    } else{
+			    deferred.resolve(CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST));
+		    }
+		    return deferred.promise;
 	    };
 
 	    return {
@@ -554,7 +569,7 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
 	    };
     };
 
-	angular.module('ds').factory('MainService', ['UtilityService', 'CacheService', 'Constants', MainService]);
+	angular.module('ds').factory('MainService', ['UtilityService', 'CacheService', 'Constants', 'ProfileService', 'PostService', 'PortfolioService', '$q' , MainService]);
 })();
 /**
  * Created by Danny Schreiber on 2/4/2015.
@@ -573,7 +588,9 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
 
 	    function init(){
 
-		    pc.portfolio = MainService.getPortfolioForMainPage();
+		    MainService.getPortfolioForMainPage().then(function(data){
+			    pc.portfolio = data;
+		    });
 		    pc.viewProjectList = viewProjectList;
 	    }
 

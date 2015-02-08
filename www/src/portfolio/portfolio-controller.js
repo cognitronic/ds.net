@@ -15,7 +15,9 @@
 
 	    function init(){
 
-		    pc.portfolio = MainService.getPortfolioForMainPage();
+		    MainService.getPortfolioForMainPage().then(function(data){
+			    pc.portfolio = data;
+		    });
 		    pc.viewProjectList = viewProjectList;
 	    }
 

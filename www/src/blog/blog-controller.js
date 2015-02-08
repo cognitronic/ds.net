@@ -13,7 +13,9 @@
 	    init();
 
 	    function init(){
-		    bc.posts = MainService.getPostsForMainPage();
+		    MainService.getPostsForMainPage().then(function(data){
+			    bc.posts = data;
+		    });
 	    }
 
 	    function viewPost(title){

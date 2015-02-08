@@ -11,8 +11,11 @@
 	    init();
 
 	    function init(){
-			ac.profile = MainService.getProfile();
-		    ac.words = ['software engineering', 'artistic exploration', 'writing and playing music'];
+			MainService.getProfile().then(function(data){
+				ac.profile = data;
+			});
+
+		    ac.words = ['software engineering', 'artistic exploration', 'writing and playing music', 'Brazilian Jiu Jitsu', 'learning new things'];
 	    }
     };
 	angular.module('ds').controller('AboutController', ['MainService', AboutController]);

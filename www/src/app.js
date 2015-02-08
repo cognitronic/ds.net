@@ -171,26 +171,4 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			});
-	})
-	.run(function(ProfileService, CacheService, Constants, PostService, PortfolioService){
-		if(!CacheService.getItem(Constants.CACHE.CURRENT_PROFILE)){
-			ProfileService.getProfile()
-				.then(function(data){
-					CacheService.setItem(Constants.CACHE.CURRENT_PROFILE, data[0]);
-				});
-		}
-
-		if(!CacheService.getItem(Constants.CACHE.POSTS_LIST)){
-			PostService.getPosts()
-				.then(function(data){
-					CacheService.setItem(Constants.CACHE.POSTS_LIST, data);
-				});
-		}
-
-		if(!CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST)){
-			PortfolioService.getPortfolio()
-				.then(function(data){
-					CacheService.setItem(Constants.CACHE.PORTFOLIO_LIST, data);
-				});
-		}
 	});

@@ -16,9 +16,11 @@
 	    init();
 
 	    function init(){
-		    spa.profile = MainService.getProfile();
-		    setTagLine();
-		    setBannerImage();
+		    MainService.getProfile().then(function(data){
+			    spa.profile = data;
+			    setTagLine();
+			    setBannerImage();
+		    });
 		    spa.posts = MainService.getPostsForMainPage();
 		    spa.portfolio = MainService.getPortfolioForMainPage();
 
