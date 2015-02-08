@@ -15,7 +15,7 @@
 				<div class="media-container">
 					<div class="media-box">
 						<cl-image public-id="{{post.imagePath}}" class="thumbnail inline" >
-							<cl-transformation format="png" height="266" width="305" crop="fill" effect="shadow"></cl-transformation>
+							<cl-transformation format="png" height="266" width="305" crop="fit" effect="shadow"></cl-transformation>
 						</cl-image>
 						<a href="" ng-click="bc.viewPost(post.title)"></a>
 					</div>
@@ -25,7 +25,7 @@
                         {{post.dateCreated | date : 'MMM'}}<br/>
 	                    <small>{{post.dateCreated | date : 'yyyy'}}</small>
                     </span>
-						<h3>
+						<h3 class="clearfix">
 							<a href="" ui-sref="bc.viewPost(post.title)">
 								{{post.title}}
 							</a>
