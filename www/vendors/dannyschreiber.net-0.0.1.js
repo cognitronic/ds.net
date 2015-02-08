@@ -90,7 +90,7 @@ angular.module('ds', ['ui.router',
 				}
 			})
 			.state('portfolio', {
-				url: '/portfolio',
+				url: '/work',
 				views: {
 					'header@': {
 						templateUrl: '/src/core/layout/header.html',
@@ -202,7 +202,7 @@ angular.module('ds', ['ui.router',
 				ac.profile = data;
 			});
 
-		    ac.words = ['software engineering', 'artistic exploration', 'writing and playing music', 'Brazilian Jiu Jitsu', 'learning new things'];
+		    ac.words = ['software engineering', 'artistic exploration', 'playing music', 'Brazilian Jiu Jitsu', 'learning new things'];
 	    }
     };
 	angular.module('ds').controller('AboutController', ['MainService', AboutController]);

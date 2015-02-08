@@ -77,7 +77,7 @@ angular.module('ds', ['ui.router',
 				}
 			})
 			.state('portfolio', {
-				url: '/portfolio',
+				url: '/work',
 				views: {
 					'header@': {
 						templateUrl: '/src/core/layout/header.html',
