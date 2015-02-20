@@ -555,43 +555,28 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
 
 	    var _getProfile = function(){
 		    var deferred = $q.defer();
-		    if(!CacheService.getItem(Constants.CACHE.CURRENT_PROFILE)){
-			    ProfileService.getProfile()
-				    .then(function(data){
-					    CacheService.setItem(Constants.CACHE.CURRENT_PROFILE, data[0]);
-					    deferred.resolve(data[0]);
-				    });
-		    } else{
-			    deferred.resolve(CacheService.getItem(Constants.CACHE.CURRENT_PROFILE));
-		    }
+		    ProfileService.getProfile()
+			    .then(function(data){
+				    deferred.resolve(data[0]);
+			    });
 		    return deferred.promise;
 		};
 
 	    var _getPostsForMainPage = function(){
 		    var deferred = $q.defer();
-		    if(!CacheService.getItem(Constants.CACHE.POSTS_LIST)){
-			    PostService.getPosts()
-				    .then(function(data){
-					    CacheService.setItem(Constants.CACHE.POSTS_LIST, data);
-					    deferred.resolve(data);
-				    });
-		    } else{
-			    deferred.resolve(CacheService.getItem(Constants.CACHE.POSTS_LIST));
-		    }
+		    PostService.getPosts()
+			    .then(function(data){
+				    deferred.resolve(data);
+			    });
 		    return deferred.promise;
 	    };
 
 	    var _getPortfolioForMainPage = function(){
 		    var deferred = $q.defer();
-		    if(!CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST)){
-			    PortfolioService.getPortfolio()
-				    .then(function(data){
-					    CacheService.setItem(Constants.CACHE.PORTFOLIO_LIST, data);
-					    deferred.resolve(data);
-				    });
-		    } else{
-			    deferred.resolve(CacheService.getItem(Constants.CACHE.PORTFOLIO_LIST));
-		    }
+		    PortfolioService.getPortfolio()
+			    .then(function(data){
+				    deferred.resolve(data);
+			    });
 		    return deferred.promise;
 	    };
 
