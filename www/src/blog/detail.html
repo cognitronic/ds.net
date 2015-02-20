@@ -28,7 +28,7 @@
 
             <span class="posted-by">
                 by
-                <a class="url fn n" href="#" title="View all posts by ahmetsali" rel="author">{{bdc.post.author}}</a>
+                <a class="url fn n" href="#" title="View all posts by this author" rel="author">{{bdc.post.author}}</a>
             </span>
 
 		</div>
@@ -36,14 +36,16 @@
 
 		<!-- .featured-image -->
 		<div class="featured-image">
-			<img ng-src="{{bdc.post.imagePath}}" alt="blog-image">
+			<cl-image public-id="{{bdc.post.imagePath}}" class="thumbnail inline" >
+				<cl-transformation format="png" height="414" width="391" crop="mfit" effect="shadow"></cl-transformation>
+			</cl-image>
 		</div>
 		<!-- .featured-image -->
 
 
 		<!-- .entry-content -->
 		<div class="entry-content">
-			{{bdc.post.postBody}}
+			<div ng-bind-html="bdc.post.postBody"></div>
 		</div>
 	</article>
 </div>
