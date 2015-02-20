@@ -46,6 +46,17 @@
 		<!-- .entry-content -->
 		<div class="entry-content">
 			<div ng-bind-html="bdc.post.postBody"></div>
+			<!-- .project-action -->
+			<!--<div class="project-action">-->
+				<!--<a href="https://github.com/cognitronic/ram-ui-modal/archive/master.zip" class="button button-icon big blue"><i class="fa fa-cloud-download"></i>DOWNLOAD</a>-->
+				<!--<a href="https://github.com/cognitronic/ram-ui-modal" class="button button-icon big red"><i class="fa fa-github"></i>GITHUB</a>-->
+			<!--</div>-->
 		</div>
+		<!-- .entry-meta -->
+		<footer class="entry-meta">
+			<h3>TAGS</h3>
+			<a href="#" rel="tag" ng-repeat="tag in bdc.post.tags">{{tag}}</a>
+		</footer>
+		<!-- .entry-meta -->
 	</article>
 </div>
