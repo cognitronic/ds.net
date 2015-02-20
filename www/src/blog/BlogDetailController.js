@@ -14,7 +14,7 @@
 
 		function init(){
 			PostService.getPost($state.params.title).then(function(data){
-				bdc.post = data;
+				bdc.post = data[0];
 			});
 		}
 
