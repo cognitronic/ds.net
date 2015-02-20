@@ -1,0 +1,49 @@
+<!-- .blog-single -->
+<div class="readable-content blog-single ">
+
+
+	<!-- .hentry -->
+	<article class="post type-post format-standard hentry">
+
+
+		<!-- .entry-header -->
+		<header class="entry-header">
+			<h1 class="entry-title">{{bdc.post.title}}</h1>
+		</header>
+		<!-- .entry-header -->
+
+		<!-- .entry-meta -->
+		<div class="entry-meta">
+                      	
+            <span class="posted-in">
+                posted in
+                <a href="#" title="View all posts in Web Design">Software Development</a>
+            </span>
+
+            <span class="posted-on">
+                on
+                <a href="#" title="11:15 pm" rel="bookmark"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">{{bdc.post.dateCreated | date:'MMM-dd-yyyy'}}</time></a>
+            </span>
+
+
+            <span class="posted-by">
+                by
+                <a class="url fn n" href="#" title="View all posts by ahmetsali" rel="author">{{bdc.post.author}}</a>
+            </span>
+
+		</div>
+		<!-- .entry-meta -->
+
+		<!-- .featured-image -->
+		<div class="featured-image">
+			<img ng-src="{{bdc.post.imagePath}}" alt="blog-image">
+		</div>
+		<!-- .featured-image -->
+
+
+		<!-- .entry-content -->
+		<div class="entry-content">
+			{{bdc.post.postBody}}
+		</div>
+	</article>
+</div>

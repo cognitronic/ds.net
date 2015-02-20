@@ -60,6 +60,22 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			})
+			.state('blog.detail', {
+				url: '/:title',
+				views: {
+					'header@': {
+						templateUrl: '/src/core/layout/header.html',
+						controller: 'HeaderController as hc'
+					},
+					'main-content@': {
+						templateUrl: 'src/blog/detail.html',
+						controller: 'BlogDetailController as bdc'
+					},
+					'footer@': {
+						templateUrl: '/src/core/layout/footer.html'
+					}
+				}
+			})
 			.state('blog-list', {
 				url: '/blog-list',
 				views: {
@@ -146,15 +162,6 @@ angular.module('ds', ['ui.router',
 					},
 					'footer@': {
 						templateUrl: '/src/core/layout/footer.html'
-					}
-				}
-			})
-			.state('blog.detail', {
-				url: '/:title',
-				views: {
-					'list': {
-						templateUrl: '/src/posts/detail.html',
-						controller: 'PostDetailController as postVm'
 					}
 				}
 			})

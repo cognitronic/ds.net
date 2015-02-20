@@ -73,6 +73,22 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			})
+			.state('blog.detail', {
+				url: '/:title',
+				views: {
+					'header@': {
+						templateUrl: '/src/core/layout/header.html',
+						controller: 'HeaderController as hc'
+					},
+					'main-content@': {
+						templateUrl: 'src/blog/detail.html',
+						controller: 'BlogDetailController as bdc'
+					},
+					'footer@': {
+						templateUrl: '/src/core/layout/footer.html'
+					}
+				}
+			})
 			.state('blog-list', {
 				url: '/blog-list',
 				views: {
@@ -162,15 +178,6 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			})
-			.state('blog.detail', {
-				url: '/:title',
-				views: {
-					'list': {
-						templateUrl: '/src/posts/detail.html',
-						controller: 'PostDetailController as postVm'
-					}
-				}
-			})
 			.state('project', {
 				url:'/Work',
 				abstract: true
@@ -206,6 +213,32 @@ angular.module('ds', ['ui.router',
 	    }
     };
 	angular.module('ds').controller('AboutController', ['MainService', AboutController]);
+})();
+/**
+ * Created by Danny Schreiber on 2/20/2015.
+ */
+(function(){ 'use strict';
+	var BlogDetailController = function(MainService, PostService, UtilityService, $state){
+		var bdc = this;
+
+		bdc.post = {};
+
+		bdc.init = init;
+		bdc.backToList = backToList;
+
+		init();
+
+		function init(){
+			PostService.getPost($state.params.title).then(function(data){
+				bdc.post = data;
+			});
+		}
+
+		function backToList(){
+			$state.go('blog');
+		}
+	};
+	angular.module('ds').controller('BlogDetailController', ['MainService', 'PostService', 'UtilityService', '$state', BlogDetailController]);
 })();
 /**
  * Created by Danny Schreiber on 2/4/2015.
