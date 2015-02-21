@@ -11,7 +11,8 @@ angular.module('ds', ['ui.router',
 	'ram-utilities.ui',
 	'danny.ui.services',
 	'cloudinary'])
-	.config(function($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider) {
+	.config(function($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
+		$urlMatcherFactoryProvider.strictMode(false);
 		$locationProvider.html5Mode(true);
 		$httpProvider.defaults.transformRequest = function (data) {
 			if (data === undefined) {

@@ -62,7 +62,7 @@ angular.module('danny.ui.services', [
 (function(){ 'use strict';
     var UtilityService = function(){
 	    var _formatStringForURL = function(str){
-		    return str.split(' ').join('-');
+		    return str.split(' ').join('-').trim();
 	    };
 
 	    return {
@@ -83,6 +83,9 @@ angular.module('danny.ui.services', [
 		};
 
 		var _formatTagsForSaving = function(tags){
+			if(Object.prototype.toString.call(tags) === '[object Array]'){
+				return tags;
+			}
 			return tags.split(',');
 		};
 
@@ -161,6 +164,14 @@ angular.module('danny.ui.services', [
 		    return deferred.promise;
 	    };
 
+	    var _getAllPosts = function(){
+		    var deferred = $q.defer();
+		    var _success = function(data){deferred.resolve(data);};
+		    var _error = function(data){deferred.resolve(data);};
+		    RestService.getData(Constants.ROUTES.ALL_POSTS, null, null, _success, '', _error, {showLoader: true});
+		    return deferred.promise;
+	    };
+
 	    var _savePost = function(post, title){
 		    var deferred = $q.defer();
 		    var _success = function(data){deferred.resolve(data);};
@@ -182,6 +193,7 @@ angular.module('danny.ui.services', [
 
 		return {
 			getPosts: _getPosts,
+			getAllPosts: _getAllPosts,
 			getPost: _getPost,
 			savePost: _savePost,
 			deletePost: _deletePost
