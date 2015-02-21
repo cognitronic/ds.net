@@ -109,6 +109,22 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			})
+			.state('portfolio.detail', {
+				url:'/:title',
+				views: {
+					'header@': {
+						templateUrl: '/src/core/layout/header.html',
+						controller: 'HeaderController as hc'
+					},
+					'main-content@': {
+						templateUrl: 'src/portfolio/detail.html',
+						controller: 'ProjectController as projVm'
+					},
+					'footer@': {
+						templateUrl: '/src/core/layout/footer.html'
+					}
+				}
+			})
 			.state('contact', {
 				url: '/contact',
 				views: {
@@ -147,22 +163,6 @@ angular.module('ds', ['ui.router',
 					'list': {
 						templateUrl: '/src/posts/list.html',
 						controller: 'PostController as posts'
-					}
-				}
-			})
-			.state('portfolio.detail', {
-				url:'/:title',
-				views: {
-					'header@': {
-						templateUrl: '/src/core/layout/header.html',
-						controller: 'HeaderController as hc'
-					},
-					'main-content@': {
-						templateUrl: 'src/portfolio/detail.html',
-						controller: 'ProjectController as projVm'
-					},
-					'footer@': {
-						templateUrl: '/src/core/layout/footer.html'
 					}
 				}
 			})

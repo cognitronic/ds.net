@@ -122,6 +122,22 @@ angular.module('ds', ['ui.router',
 					}
 				}
 			})
+			.state('portfolio.detail', {
+				url:'/:title',
+				views: {
+					'header@': {
+						templateUrl: '/src/core/layout/header.html',
+						controller: 'HeaderController as hc'
+					},
+					'main-content@': {
+						templateUrl: 'src/portfolio/detail.html',
+						controller: 'ProjectController as projVm'
+					},
+					'footer@': {
+						templateUrl: '/src/core/layout/footer.html'
+					}
+				}
+			})
 			.state('contact', {
 				url: '/contact',
 				views: {
@@ -160,22 +176,6 @@ angular.module('ds', ['ui.router',
 					'list': {
 						templateUrl: '/src/posts/list.html',
 						controller: 'PostController as posts'
-					}
-				}
-			})
-			.state('portfolio.detail', {
-				url:'/:title',
-				views: {
-					'header@': {
-						templateUrl: '/src/core/layout/header.html',
-						controller: 'HeaderController as hc'
-					},
-					'main-content@': {
-						templateUrl: 'src/portfolio/detail.html',
-						controller: 'ProjectController as projVm'
-					},
-					'footer@': {
-						templateUrl: '/src/core/layout/footer.html'
 					}
 				}
 			})
@@ -421,7 +421,7 @@ $.cloudinary.config().upload_preset = 'ormwe5hh';
 		    var msg = {
 			    fromEmail: email.fromEmail,
 			    toEmail: 'danny@ravenartmedia.com',
-			    subject: email.subject,
+			    subject: email.subject || 'RavenArtMedia.com Contact Form',
 			    textMessage: email.htmlMessage,
 			    htmlMessage: 'Name: ' + email.name + ' <br/><br />'
 		    };

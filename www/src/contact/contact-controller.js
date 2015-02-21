@@ -20,7 +20,7 @@
 		    var msg = {
 			    fromEmail: email.fromEmail,
 			    toEmail: 'danny@ravenartmedia.com',
-			    subject: email.subject,
+			    subject: email.subject || 'RavenArtMedia.com Contact Form',
 			    textMessage: email.htmlMessage,
 			    htmlMessage: 'Name: ' + email.name + ' <br/><br />'
 		    };
