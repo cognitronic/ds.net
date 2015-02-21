@@ -30,7 +30,7 @@
 		<!-- PORTFOLIO-IMAGES - column 8/12 -->
 		<div class="col-md-8 portfolio-field">
 			<div ng-repeat="img in projVm.project.imagePaths">
-				<cl-image public-id="{{img}}" class="thumbnail inline" >
+				<cl-image public-id="{{img.trim()}}" class="thumbnail inline" >
 					<cl-transformation format="png" height="705" width="940" crop="mpad" effect="shadow"></cl-transformation>
 				</cl-image>
 			</div>
