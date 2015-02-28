@@ -210,7 +210,7 @@ angular.module('ds', ['ui.router',
 				ac.profile = data;
 			});
 
-		    ac.words = ['software engineering', 'artistic exploration', 'playing music', 'Brazilian Jiu Jitsu', 'learning new things'];
+		    ac.words = ['software engineering', 'artistic exploration', 'music', 'Brazilian Jiu Jitsu', 'learning new things'];
 	    }
     };
 	angular.module('ds').controller('AboutController', ['MainService', AboutController]);
