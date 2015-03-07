@@ -85,7 +85,15 @@ module.exports = function (grunt) {
                 dest: 'dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
             },
             dist_css: {
-                src:['www/src/assets/css/**/*.css', '!www/src/assets/css/<%= pkg.namelower %>-<%= pkg.version %>.*'],
+                src:[
+					'www/vendors/theme/css/bootstrap.css',
+	                'www/vendors/theme/css/animate.css',
+	                'www/vendors/theme/css/jquery.fancybox-1.3.4.css',
+	                'www/src/assets/css/**/*.css',
+	                'www/vendors/theme/css/flexslider.css',
+	                'www/vendors/angularjs-toaster/toaster.css',
+	                'www/vendors/theme/css/skins/overlay-bold.css',
+	                '!www/src/assets/css/<%= pkg.namelower %>-<%= pkg.version %>.*'],
                 dest:'dist/<%= pkg.namelower %>-<%= pkg.version %>.css'
             }
         },
