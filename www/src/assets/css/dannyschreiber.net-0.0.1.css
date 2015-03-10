@@ -4307,18 +4307,18 @@ button.toast-close-button {
 /* OVERLAY BOLD STYLE */
 
 /* HEADER */
-.header { 
-	position: relative; width: 100%; background-color: #345; background-size: cover; background-position: center center;
-	}
-	.header img { 
-		display: none; 
-		}
-	.header * { 
-		position: relative; z-index: 10; 
-		}
-	.header:before { 
-		content: ""; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0;
-		}
+.header {
+    position: relative; width: 100%; background-color: #345; background-image: url(http://res.cloudinary.com/raven-art-media/image/upload/c_scale,w_1925/v1423070348/IMG_2732_xtvr95.jpg); background-size: cover; background-position: center center;
+}
+.header img {
+    display: none;
+}
+.header * {
+    position: relative; z-index: 10;
+}
+.header:before {
+    content: ""; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAFUlEQVQIW2NkQAKMUPZ/IM0I44DFABJxAQQMGKylAAAAAElFTkSuQmCC);
+}
 	.header h1 {
 		margin: 0 0 .3em 0; font-size: 5.8em; line-height: 1; font-weight: 900; color: #fff; text-shadow: 0 4px 0 rgba(51, 51, 51, 0.36); letter-spacing: -4px; text-transform: uppercase;
 		}
