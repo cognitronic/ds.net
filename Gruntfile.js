@@ -84,6 +84,35 @@ module.exports = function (grunt) {
                 src: ['www/src/modules.js', 'www/src/app.js','www/src/**/*.js', '!www/src/**/*.spec.js'],
                 dest: 'dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
             },
+	        dist_vendors: {
+		        src: ['www/vendors/jquery/jquery.min.js',
+			        'www/vendors/cloudinary/jquery.cloudinary.js',
+			        'www/vendors/angular/angular.min.js',
+			        'ww/vendors/angular-animate/angular-animate.min.js',
+			        'www/vendors/cloudinary/angular.cloudinary.js',
+			        'www/vendors/angular-ui-router/release/angular-ui-router.min.js',
+			        'www/vendors/angular-bootstrap/ui-bootstrap.min.js',
+			        'www/vendors/angular-sanitize/angular-sanitize.min.js',
+			        'www/vendors/theme/js/jquery-migrate-1.2.1.min.js',
+			        'www/vendors/theme/js/jquery.address-1.5.min.js',
+			        'www/vendors/theme/js/triple.layout.js',
+			        'www/vendors/theme/js/smoothscroll.js',
+			        'www/vendors/theme/js/nprogress/nprogress.js',
+			        'www/vendors/theme/js/fastclick.js',
+			        'www/vendors/theme/js/jquery.imagesloaded.min.js',
+			        'www/vendors/theme/js/jquery.isotope.min.js',
+			        'www/vendors/theme/js/jquery.flexslider-min.js',
+			        'www/vendors/theme/js/jquery.validate.min.js',
+			        'www/vendors/theme/js/jquery.uniform.min.js',
+			        'www/vendors/theme/js/jquery.fancybox-1.3.4.pack.js',
+			        'www/vendors/theme/js/twitterFetcher_v10_min.js',
+			        'www/vendors/ram-utilities/dist/ram-utilities-0.0.1.js',
+			        'www/vendors/admin-services/dannyschreiber-services-0.0.1.min.js',
+			        'www/vendors/dannyschreiber.net-0.0.1.js',
+			        'www/vendors/theme/js/main.js'
+		        ],
+		        dest: 'dist/vendors.js'
+	        },
             dist_css: {
                 src:[
 					'www/vendors/theme/css/bootstrap.css',
@@ -120,7 +149,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'dist/',
-                        src: ['<%= pkg.namelower %>-<%= pkg.version %>.js','<%= pkg.namelower %>-<%= pkg.version %>.min.js'],
+                        src: ['<%= pkg.namelower %>-<%= pkg.version %>.js','<%= pkg.namelower %>-<%= pkg.version %>.min.js', 'vendors.js'],
                         dest: 'www/vendors/'
                     },
                     {

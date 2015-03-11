@@ -231,16 +231,16 @@ var $container, $blog_container;
 
 		// ------------------------------
 		/* TOOLTIPS */
-		$('.tooltip').each(function(index, element) {
-        	$(this).tooltipster({
-			position: $(this).attr('data-tooltip-pos'),
-			fixedWidth : 300,
-			offsetX : 8,
-			animation : "grow",
-			delay : 50
-			});
-
-        });
+        //$('.tooltip').each(function(index, element) {
+        //	$(this).tooltipster({
+			//position: $(this).attr('data-tooltip-pos'),
+			//fixedWidth : 300,
+			//offsetX : 8,
+			//animation : "grow",
+			//delay : 50
+			//});
+        //
+        //});
 		// ------------------------------
 
 
