@@ -28,6 +28,7 @@ angular.module('ds', ['ui.router',
 		$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 		$httpProvider.defaults.headers['delete'] = {'Content-Type': 'application/json; charset=UTF-8'};
 		$urlRouterProvider.otherwise('/');
+
 		$stateProvider
 			.state('about', {
 				url: '/',
