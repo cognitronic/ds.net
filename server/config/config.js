@@ -15,6 +15,6 @@ module.exports = {
     production: {
         rootPath: rootPath,
         db: 'mongodb://heroku_app33803161:hf0ai7fhuiroib66egrflg7h28@ds041851.mongolab.com:41851/heroku_app33803161',
-        port: process.env.PORT || 80
+        port: process.env.PORT || 3000
     }
 };
