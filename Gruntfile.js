@@ -140,7 +140,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dist/<%= pkg.namelower %>-<%= pkg.version %>.min.js': ['dist/<%= pkg.namelower %>-<%= pkg.version %>.js']
+                    'dist/<%= pkg.namelower %>-<%= pkg.version %>.min.js': ['dist/<%= pkg.namelower %>-<%= pkg.version %>.js'],
+                    'dist/vendors.min.js': 'dist/vendors.js'
                 }
             }
         },
@@ -150,7 +151,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'dist/',
-                        src: ['<%= pkg.namelower %>-<%= pkg.version %>.js','<%= pkg.namelower %>-<%= pkg.version %>.min.js', 'vendors.js'],
+                        src: ['<%= pkg.namelower %>-<%= pkg.version %>.js','<%= pkg.namelower %>-<%= pkg.version %>.min.js', 'vendors.js', 'vendors.min.js'],
                         dest: 'www/vendors/'
                     },
                     {
