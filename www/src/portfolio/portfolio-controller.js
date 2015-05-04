@@ -18,6 +18,7 @@
 		    MainService.getPortfolioForMainPage().then(function(data){
 			    pc.portfolio = data;
 		    });
+
 		    pc.viewProjectList = viewProjectList;
 	    }
 
