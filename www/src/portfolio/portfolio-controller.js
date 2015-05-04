@@ -22,7 +22,8 @@
 	    }
 
 	    function openProject(title){
-		    $state.go('portfolio.detail', {title: UtilityService.formatStringForURL(title)});
+		    var str = UtilityService.formatStringForURL(title);
+		    $state.go('portfolio.detail', {title: str});
 	    }
 
 	    function viewProjectList(){
